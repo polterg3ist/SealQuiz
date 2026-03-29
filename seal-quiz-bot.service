@@ -1,5 +1,5 @@
 [Unit]
-Description=Угадай тюленя — Telegram Bot
+Description=Какой ты тюлень — Telegram Quiz Bot
 After=network-online.target
 Wants=network-online.target
 
@@ -14,12 +14,11 @@ StartLimitBurst=5
 
 # Переменные окружения (или укажи токен здесь напрямую)
 EnvironmentFile=/home/pltgst/SealQuiz/SealQuiz/.env
-ExecStart=/home/pltgst/SealQuiz/SealQuiz/venv/bin/python bot.py
+ExecStart=/home/pltgst/SealQuiz/SealQuiz/venv/bin/python quiz_bot.py
 
-# Логи
 StandardOutput=journal
 StandardError=journal
-SyslogIdentifier=seal-bot
+SyslogIdentifier=seal-quiz-bot
 
 [Install]
 WantedBy=multi-user.target
